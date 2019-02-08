@@ -1,0 +1,34 @@
+<% include ./partials/header.ejs %>
+
+<table>
+
+    <tr >
+        <th>FirstName</th><th>LastName</th>
+    </tr>
+
+
+
+
+<% for(let i=0; i<person.length;i++){ %>
+       <tr>
+   <td> <%= person[i].firstname %> </td><td><%= person[i].lastname %> </td>
+</tr>
+<% }  %>
+
+</table> 
+
+<form action="/add" method="POST">
+<input placeholder="enter your name" type="name" name="fname">
+<input placeholder="enter your name" type="name" name="lname">
+<button type="submit">Add Name</button>
+
+</form>
+
+
+
+
+
+
+
+
+<% include ./partials/footer.ejs %>
